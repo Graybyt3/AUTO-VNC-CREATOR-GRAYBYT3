@@ -61,7 +61,7 @@ echo -e "${N}"
 
 if [ "$EUID" -ne 0 ]; then
     cecho "$R" "RUN AS ROOT:"
-    cecho "$Y" "sudo bash vnc.sh"
+    cecho "$Y" "sudo bash vn.sh"
     exit 1
 fi
 
@@ -191,4 +191,7 @@ echo
 cecho "$G" "6. IF PORT 3389 IS BLOCKED, USE SSH TUNNEL:"
 cecho "$W" "   ssh -L 3389:127.0.0.1:3389 $USERNAME@$SERVER_IP"
 cecho "$W" "   THEN CONNECT REMMINA TO 127.0.0.1"
+echo
+echo
+cecho "$R" "⚠️⚠️ MUST SELECT - LAN - NETWORK CONNECTION IN REMMINA RDP SETTINGS ⚠️⚠️"
 echo
